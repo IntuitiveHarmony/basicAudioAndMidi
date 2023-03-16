@@ -29,5 +29,8 @@ private:
     // access the processor object that created it.
     BasicAudioAndMidiAudioProcessor& audioProcessor;
 
+    // ~~ Create Slider Object ~~
+    juce::Slider midiVolume;
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BasicAudioAndMidiAudioProcessorEditor)
 };
