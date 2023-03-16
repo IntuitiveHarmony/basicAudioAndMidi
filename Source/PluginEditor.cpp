@@ -29,10 +29,20 @@ BasicAudioAndMidiAudioProcessorEditor::BasicAudioAndMidiAudioProcessorEditor (Ba
     
     // ~~ Add Slider to the editor ~~
     addAndMakeVisible (&midiVolume);
+    
+    // ~~ Add listener to the slider ~~
+    midiVolume.addListener (this);
+    
 }
 
 BasicAudioAndMidiAudioProcessorEditor::~BasicAudioAndMidiAudioProcessorEditor()
 {
+}
+
+// ~~ Listener functionthat sets the processor volume variable ~~
+void BasicAudioAndMidiAudioProcessorEditor::sliderValueChanged(juce::Slider* slider)
+{
+    audioProcessor.noteOnVel = midiVolume.getValue();
 }
 
 //==============================================================================

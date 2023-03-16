@@ -14,7 +14,9 @@
 //==============================================================================
 /**
 */
-class BasicAudioAndMidiAudioProcessorEditor  : public juce::AudioProcessorEditor
+class BasicAudioAndMidiAudioProcessorEditor  : public juce::AudioProcessorEditor,
+                                // ~~ Add inheritance and default callback function ~~
+                                                private juce::Slider::Listener
 {
 public:
     BasicAudioAndMidiAudioProcessorEditor (BasicAudioAndMidiAudioProcessor&);
@@ -25,6 +27,9 @@ public:
     void resized() override;
 
 private:
+    // ~~ Add default callback function  ~~
+    void sliderValueChanged (juce::Slider* slider) override;
+    
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     BasicAudioAndMidiAudioProcessor& audioProcessor;

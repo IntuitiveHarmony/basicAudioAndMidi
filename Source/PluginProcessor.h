@@ -16,6 +16,8 @@
 class BasicAudioAndMidiAudioProcessor  : public juce::AudioProcessor
 {
 public:
+    // ~~ Create variable for our slider to adjust ~~
+    float noteOnVel;
     //==============================================================================
     BasicAudioAndMidiAudioProcessor();
     ~BasicAudioAndMidiAudioProcessor() override;
