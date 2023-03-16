@@ -19,7 +19,7 @@ BasicAudioAndMidiAudioProcessorEditor::BasicAudioAndMidiAudioProcessorEditor (Ba
     // ~~ Size of the plugin window ~~
     setSize (200, 200);
     
-    // ~~ Define the parameters of the slider object
+    // ~~ Define the parameters of the slider object ~~
     midiVolume.setSliderStyle (juce::Slider::LinearBarVertical);
     midiVolume.setRange (0.0, 127.0, 1.0);
     midiVolume.setTextBoxStyle (juce::Slider::NoTextBox, false, 90, 0);
